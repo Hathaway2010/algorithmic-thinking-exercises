@@ -34,10 +34,8 @@ function smallestCommons(arr) {
     };
   let factorObj = {}
   rangeArr.map(num => factorObj[num] = findPrimeFactors(num))
-  console.log(factorObj);
       for(let num in factorObj) {
         for (let l = 0; l < factorObj[num].length; l++) {
-          console.log(rangeArr.length)
           for (let m = Number(num) + 1; m < rangeArr.length + rangeArr[0]; m++) {
             let idxFirst = factorObj[String(m)].indexOf(factorObj[num][l]);
             if (idxFirst > -1) {
@@ -46,7 +44,6 @@ function smallestCommons(arr) {
         }
       }
     }
-    console.log(factorObj);
     let finalFactors = [];
     for (let num in factorObj) {
       finalFactors.push(...factorObj[num]);
