@@ -1,3 +1,6 @@
+//When I did this exercise I was not aware of the Euclidean algorithm or the like. I realize this is not the most efficient or elegant solution, 
+//and I may try to improve it later, but I really enjoyed working out the logic on my own.
+
 function smallestCommons(arr) {
   arr.sort((x, y) => x - y);
   let rangeArr = [...Array(arr[1] + 1).keys()];
